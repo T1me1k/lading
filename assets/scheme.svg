@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect x="0" y="0" width="900" height="520" rx="28" fill="#ffffff"/>
+  <g fill="none" stroke="#e5e7eb" stroke-width="2">
+    <path d="M110 140 C220 90, 290 90, 400 140" />
+    <path d="M400 140 C510 190, 580 190, 690 140" />
+    <path d="M110 380 C220 430, 290 430, 400 380" />
+    <path d="M400 380 C510 330, 580 330, 690 380" />
+    <path d="M240 260 C320 220, 370 220, 450 260" />
+    <path d="M450 260 C530 300, 580 300, 660 260" />
+  </g>
+
+  <g>
+    <rect x="80" y="110" width="210" height="80" rx="18" fill="#f6f7f9" stroke="#e5e7eb"/>
+    <text x="105" y="155" font-family="Inter, Arial" font-size="18" fill="#111827" font-weight="600">Работа</text>
+    <text x="105" y="178" font-family="Inter, Arial" font-size="13" fill="#6b7280">тип и нагрузка</text>
+
+    <rect x="345" y="110" width="210" height="80" rx="18" fill="#f6f7f9" stroke="#e5e7eb"/>
+    <text x="370" y="155" font-family="Inter, Arial" font-size="18" fill="#111827" font-weight="600">Питание</text>
+    <text x="370" y="178" font-family="Inter, Arial" font-size="13" fill="#6b7280">под задачу</text>
+
+    <rect x="610" y="110" width="210" height="80" rx="18" fill="#f6f7f9" stroke="#e5e7eb"/>
+    <text x="635" y="155" font-family="Inter, Arial" font-size="18" fill="#111827" font-weight="600">Состояние</text>
+    <text x="635" y="178" font-family="Inter, Arial" font-size="13" fill="#6b7280">фокус / устойчивость / энергия</text>
+
+    <rect x="220" y="230" width="230" height="80" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="245" y="275" font-family="Inter, Arial" font-size="18" fill="#111827" font-weight="600">Простая логика</text>
+    <text x="245" y="298" font-family="Inter, Arial" font-size="13" fill="#6b7280">без универсальных советов</text>
+
+    <rect x="470" y="230" width="210" height="80" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="495" y="275" font-family="Inter, Arial" font-size="18" fill="#111827" font-weight="600">Корректировки</text>
+    <text x="495" y="298" font-family="Inter, Arial" font-size="13" fill="#6b7280">аккуратно и по делу</text>
+  </g>
+
+  <g>
+    <circle cx="450" cy="60" r="6" fill="#2563eb" opacity=".65"/>
+    <circle cx="780" cy="260" r="6" fill="#2563eb" opacity=".65"/>
+    <circle cx="120" cy="260" r="6" fill="#2563eb" opacity=".65"/>
+    <circle cx="450" cy="460" r="6" fill="#2563eb" opacity=".65"/>
+  </g>
+</svg>

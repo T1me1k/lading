@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520">
+  <rect width="860" height="520" rx="28" fill="#ffffff"/>
+  <rect x="26" y="26" width="808" height="468" rx="22" fill="#f6f7f9" stroke="#e5e7eb"/>
+  <text x="56" y="78" font-family="Inter, Arial" font-size="16" fill="#111827" font-weight="600">Пример диалога</text>
+  <text x="56" y="102" font-family="Inter, Arial" font-size="12" fill="#6b7280">Сценарий · без “универсально полезно”</text>
+
+  <g font-family="Inter, Arial">
+    <rect x="56" y="140" width="520" height="68" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="76" y="166" font-size="13" fill="#6b7280">Пользователь</text>
+    <text x="76" y="190" font-size="15" fill="#111827">После смены много общения, хочется восстановиться.</text>
+
+    <rect x="284" y="230" width="520" height="92" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="304" y="256" font-size="13" fill="#6b7280">Сервис</text>
+    <text x="304" y="280" font-size="15" fill="#111827">При эмоциональной нагрузке полезно, чтобы</text>
+    <text x="304" y="302" font-size="15" fill="#111827">питание помогало “успокоить темп”, а не разгонять.</text>
+
+    <rect x="56" y="342" width="520" height="90" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="76" y="368" font-size="13" fill="#6b7280">Пользователь</text>
+    <text x="76" y="392" font-size="15" fill="#111827">А что можно поправить просто, без усложнений?</text>
+
+    <rect x="284" y="446" width="520" height="52" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="304" y="474" font-size="15" fill="#111827">Давай начнём с маленькой корректировки под твой ритм.</text>
+  </g>
+</svg>
