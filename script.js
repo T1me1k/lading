@@ -13,6 +13,14 @@ function applyTheme(theme) {
   htmlEl.setAttribute("data-theme", theme);
 }
 
+const root = document.documentElement;
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme);
+}
+
+
 function initTheme() {
   const saved = localStorage.getItem(THEME_KEY);
   if (saved === "light" || saved === "dark") {
