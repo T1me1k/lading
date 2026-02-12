@@ -1,23 +1,19 @@
 <!doctype html>
 <html lang="ru" data-theme="light">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>По работе и еда</title>
-  <meta name="description" content="Мы подбираем питание под тип рабочей нагрузки, а не под универсальные советы. Формат: простой диалог в Telegram." />
-<link rel="icon" type="image/png" href="./assets/favicon-512.png">
-<link rel="icon" type="image/png" href="./assets/favicon-512.png?v=7">
-<link rel="icon" type="image/png" href="./assets/favicon-512.png?v=3">
+  <meta name="description" content="Персональная программа питания под вашу рабочую нагрузку. Фиксированные тарифы и обратная связь. Формат — Telegram." />
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon-512.png">
+  <!-- Favicon (one is enough) -->
+  <link rel="icon" type="image/png" href="./assets/favicon-512.png?v=1">
+  <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon-512.png?v=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=5">
-
+  <link rel="stylesheet" href="./styles.css?v=6">
 </head>
 
 <body>
@@ -31,7 +27,8 @@
       <nav class="nav" aria-label="Навигация">
         <a class="nav__link" href="#types">Типы работы</a>
         <a class="nav__link" href="#how">Как устроено</a>
-        <a class="nav__link" href="#safety">Безопасность</a>
+        <a class="nav__link" href="#pricing">Цены</a>
+        <a class="nav__link" href="#contact">Связь</a>
         <a class="nav__link nav__link--cta" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть бота</a>
       </nav>
 
@@ -60,29 +57,50 @@
       <div class="container mobile-menu__inner">
         <a class="mobile-menu__link" href="#types">Типы работы</a>
         <a class="mobile-menu__link" href="#how">Как устроено</a>
-        <a class="mobile-menu__link" href="#safety">Безопасность</a>
+        <a class="mobile-menu__link" href="#pricing">Цены</a>
+        <a class="mobile-menu__link" href="#contact">Связь</a>
         <a class="mobile-menu__link mobile-menu__link--cta" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть бота</a>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- Блок 1: Hero -->
+    <!-- Блок 1: Hero (обновлён) -->
     <section class="section hero">
       <div class="container hero__grid">
         <div class="hero__text">
-          <h1 class="h1 hero-title">По работе и еда</h1>
+          <h1 class="h1 hero-title">Программа питания под вашу работу</h1>
 
-          <p class="subhead">Разная работа — разные принципы питания для продуктивности</p>
+          <p class="subhead">Подбираем подход под тип нагрузки: фокус, устойчивость или энергия</p>
+
           <p class="lead">
-            Мы подбираем питание под тип рабочей нагрузки, а не под универсальные советы
+            Вы описываете приём пищи и рабочую нагрузку — мы составляем программу и корректируем её по обратной связи.
+            Простым языком, без медицинских терминов и «универсальных советов».
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">
-              Открыть в Telegram
+            <a class="btn btn--primary" href="#pricing">
+              Выбрать тариф
             </a>
-            <a class="btn btn--ghost" href="#types">Посмотреть типы работы</a>
+            <a class="btn btn--ghost" href="#how">
+              Посмотреть пример
+            </a>
+          </div>
+
+          <!-- 3 буллета "что получу" -->
+          <div class="hero__bullets reveal">
+            <div class="hero__bullet">
+              <strong>Персональная программа</strong><br />
+              под ваш тип работы и режим дня
+            </div>
+            <div class="hero__bullet">
+              <strong>Понятные корректировки</strong><br />
+              без диет и сложных правил
+            </div>
+            <div class="hero__bullet">
+              <strong>Обратная связь</strong><br />
+              можно уточнить и подстроить под себя
+            </div>
           </div>
         </div>
 
@@ -106,6 +124,62 @@
         <p class="quote reveal">
           Одна и та же еда по-разному влияет<br />
           на разные виды работы.
+        </p>
+      </div>
+    </section>
+
+    <!-- Блок: Цены -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Стоимость программы</h2>
+          <p class="section__desc">
+            Фиксированная цена. Можно начать с месяца и продлить, если формат подходит.
+          </p>
+        </div>
+
+        <div class="pricing">
+          <article class="price-card reveal">
+            <div class="price-card__top">
+              <h3 class="h3">1 месяц</h3>
+              <div class="price-card__price">499 ₽</div>
+            </div>
+            <p class="price-card__desc">Стартовая программа и первые корректировки.</p>
+            <a class="btn btn--primary btn--block" href="#contact">Купить</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-card__top">
+              <h3 class="h3">3 месяца</h3>
+              <div class="price-card__price">1 299 ₽</div>
+            </div>
+            <p class="price-card__desc">Настройка под ритм работы и привычки.</p>
+            <a class="btn btn--primary btn--block" href="#contact">Купить</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-card__top">
+              <h3 class="h3">6 месяцев</h3>
+              <div class="price-card__price">2 499 ₽</div>
+            </div>
+            <p class="price-card__desc">Долгий цикл: спокойная адаптация и поддержка.</p>
+            <a class="btn btn--primary btn--block" href="#contact">Купить</a>
+          </article>
+
+          <article class="price-card price-card--best reveal">
+            <div class="price-card__top">
+              <h3 class="h3">12 месяцев</h3>
+              <div class="price-card__price">4 499 ₽</div>
+            </div>
+            <p class="price-card__desc">Максимально выгодный формат сопровождения.</p>
+            <a class="btn btn--primary btn--block" href="#contact">Купить</a>
+          </article>
+        </div>
+
+        <p class="pricing__note">
+          <span class="pill">Формат не медицинский</span>
+          <span class="pill">Без диагнозов</span>
+          <span class="pill">Без жёстких диет</span>
         </p>
       </div>
     </section>
@@ -216,9 +290,7 @@
               <li class="steps__item"><span class="steps__dot"></span><span>Предлагает простые корректировки без усложнений</span></li>
             </ul>
 
-            <a class="btn btn--primary" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">
-              Попробовать в Telegram
-            </a>
+           
           </div>
 
           <div class="how__right reveal" id="examples">
@@ -292,8 +364,36 @@
       </div>
     </section>
 
-    <!-- Блок 10: Финальный CTA -->
-    
+    <!-- Блок: Контакт / обратная связь -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__head">
+            <h2 class="h2">Индивидуальный подход и обратная связь</h2>
+            <p class="section__desc">
+              Оставьте номер или Telegram — мы уточним тип работы и подскажем, какой тариф подойдёт.
+            </p>
+          </div>
+
+          <form class="form" id="leadForm">
+            <label class="field">
+              <span class="field__label">Имя</span>
+              <input class="input" name="name" type="text" placeholder="Например, Алексей" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Контакт (телефон или Telegram)</span>
+              <input class="input" name="contact" type="text" placeholder="+7… или @username" required />
+            </label>
+
+            <button class="btn btn--primary btn--block" type="submit">Оставить контакт</button>
+            <p class="form__note">Используем контакт только чтобы связаться по вашему запросу.</p>
+
+            <div class="form__result" id="formResult" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -304,6 +404,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=21" defer></script>
+  <script src="./script.js?v=22" defer></script>
 </body>
 </html>
