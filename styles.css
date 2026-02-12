@@ -767,3 +767,11 @@ html[data-theme="dark"] .footer{
   .quote::before{ left:-12px; }
   .brand__logo{ width:44px; height:44px; }
 }
+
+.hero-title{
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1.5px solid rgba(27,143,80,.35);
+  border-radius: 16px;
+  background: rgba(27,143,80,.08);
+}
