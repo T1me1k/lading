@@ -37,7 +37,6 @@ requestAnimationFrame(() => {
   });
 });
 
-
 initTheme();
 
 // ===== Mobile menu =====
@@ -170,7 +169,7 @@ form?.addEventListener("submit", (e) => {
       escapeHtml(payload.name) +
       "</b>" +
       (payload.role ? " (" + escapeHtml(payload.role) + ")" : "") +
-      ". Контакт: <b>" +
+      
       escapeHtml(payload.contact) +
       "</b>.";
   }
