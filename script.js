@@ -5,6 +5,7 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const mobileLinks = document.querySelectorAll(".mobile-menu__link");
 
 function setMobileOpen(isOpen) {
+  if (!burger || !mobileMenu) return;
   burger.setAttribute("aria-expanded", String(isOpen));
   mobileMenu.hidden = !isOpen;
 }
@@ -16,6 +17,29 @@ burger?.addEventListener("click", () => {
 
 mobileLinks.forEach((a) => {
   a.addEventListener("click", () => setMobileOpen(false));
+});
+
+// Закрытие мобильного меню по клику вне и по Escape
+document.addEventListener("click", (e) => {
+  const isOpen = burger?.getAttribute("aria-expanded") === "true";
+  if (!isOpen || !mobileMenu || !burger) return;
+
+  const target = e.target;
+  const clickedBurger = burger.contains(target);
+  const clickedMenu = mobileMenu.contains(target);
+
+  if (!clickedBurger && !clickedMenu) {
+    setMobileOpen(false);
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  const isOpen = burger?.getAttribute("aria-expanded") === "true";
+  if (!isOpen) return;
+
+  if (e.key === "Escape") {
+    setMobileOpen(false);
+  }
 });
 
 // Reveal on scroll (очень лёгкий)
@@ -45,6 +69,8 @@ shotBtns.forEach((btn) => {
     btn.classList.add("is-active");
 
     const id = btn.getAttribute("data-shot");
+    if (!tgShot) return;
+
     if (id === "1") tgShot.src = "./assets/tg-1.svg";
     if (id === "2") tgShot.src = "./assets/tg-2.svg";
   });
@@ -73,26 +99,25 @@ form?.addEventListener("submit", (e) => {
     contact: data.get("contact")?.toString().trim(),
   };
 
-  // Простая проверка
   if (!payload.name || !payload.contact) {
-    result.textContent = "Заполните имя и контакт.";
+    if (result) result.textContent = "Заполните имя и контакт.";
     return;
   }
 
-  // Здесь можно подключить реальную отправку (например, webhook)
-  // fetch("YOUR_ENDPOINT", { method:"POST", body: JSON.stringify(payload) ... })
-
-  result.innerHTML =
-    "Спасибо! Мы получили запрос от <b>" +
-    escapeHtml(payload.name) +
-    "</b>" +
-    (payload.role ? " (" + escapeHtml(payload.role) + ")" : "") +
-    ". Контакт: <b>" +
-    escapeHtml(payload.contact) +
-    "</b>.";
+  if (result) {
+    result.innerHTML =
+      "Спасибо! Мы получили запрос от <b>" +
+      escapeHtml(payload.name) +
+      "</b>" +
+      (payload.role ? " (" + escapeHtml(payload.role) + ")" : "") +
+      ". Контакт: <b>" +
+      escapeHtml(payload.contact) +
+      "</b>.";
+  }
 
   form.reset();
 });
 
 // Год в футере
-document.getElementById("year").textContent = String(new Date().getFullYear());
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
