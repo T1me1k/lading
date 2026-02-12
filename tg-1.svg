@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520">
+  <rect width="860" height="520" rx="28" fill="#ffffff"/>
+  <rect x="26" y="26" width="808" height="468" rx="22" fill="#f6f7f9" stroke="#e5e7eb"/>
+  <text x="56" y="78" font-family="Inter, Arial" font-size="16" fill="#111827" font-weight="600">Пример диалога</text>
+  <text x="56" y="102" font-family="Inter, Arial" font-size="12" fill="#6b7280">Сценарий · без обещаний результата</text>
+
+  <g font-family="Inter, Arial">
+    <rect x="56" y="140" width="520" height="68" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="76" y="166" font-size="13" fill="#6b7280">Пользователь</text>
+    <text x="76" y="190" font-size="15" fill="#111827">Съел(а) обычный обед, потом нужно 3 часа фокуса.</text>
+
+    <rect x="284" y="230" width="520" height="92" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="304" y="256" font-size="13" fill="#6b7280">Сервис</text>
+    <text x="304" y="280" font-size="15" fill="#111827">При умственной работе важно, чтобы после еды</text>
+    <text x="304" y="302" font-size="15" fill="#111827">сохранялась ясность и ровный темп.</text>
+
+    <rect x="284" y="342" width="520" height="112" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="304" y="368" font-size="13" fill="#6b7280">Сервис</text>
+    <text x="304" y="392" font-size="15" fill="#111827">Если чувствуешь “тяжесть” или сонливость —</text>
+    <text x="304" y="414" font-size="15" fill="#111827">в следующий раз можно сделать порцию легче</text>
+    <text x="304" y="436" font-size="15" fill="#111827">или разделить на два приёма.</text>
+  </g>
+</svg>
