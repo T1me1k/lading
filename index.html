@@ -1,303 +1,321 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <link rel="icon" type="image/png" href="./assets/favicon-512.png">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>По работе и еда</title>
   <meta name="description" content="Мы подбираем питание под тип рабочей нагрузки, а не под универсальные советы. Формат: простой диалог в Telegram." />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon-512.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=21" />
 </head>
 
 <body>
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="#top" aria-label="На верх страницы">
-      <img class="brand__logo" src="./assets/logo_no_bg.png" alt="" aria-hidden="true" />
-      <span class="brand__name">По работе и еда</span>
-    </a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="На верх страницы">
+        <img class="brand__logo" src="./assets/logo_no_bg.png" alt="Логотип" />
+        <span class="brand__name">По работе и еда</span>
+      </a>
 
-    <nav class="nav" aria-label="Навигация">
-      <a class="nav__link" href="#types">Типы работы</a>
-      <a class="nav__link" href="#how">Как устроено</a>
-      <a class="nav__link" href="#safety">Безопасность</a>
-      <a class="nav__link nav__link--cta" href="#cta">Контакт</a>
-    </nav>
+      <nav class="nav" aria-label="Навигация">
+        <a class="nav__link" href="#types">Типы работы</a>
+        <a class="nav__link" href="#how">Как устроено</a>
+        <a class="nav__link" href="#safety">Безопасность</a>
+        <a class="nav__link nav__link--cta" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть бота</a>
+      </nav>
 
-    <div class="header__right">
-      <button class="theme-toggle" type="button" aria-label="Переключить тему" title="Тема">
-        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </button>
+      <div class="header__right">
+        <button class="theme-toggle" type="button" aria-label="Переключить тему" title="Тема">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
 
-      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-
-  <div class="mobile-menu" hidden>
-    <div class="container mobile-menu__inner">
-      <a class="mobile-menu__link" href="#types">Типы работы</a>
-      <a class="mobile-menu__link" href="#how">Как устроено</a>
-      <a class="mobile-menu__link" href="#safety">Безопасность</a>
-      <a class="mobile-menu__link mobile-menu__link--cta" href="#cta">Контакт</a>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-  <!-- Блок 1: Hero -->
-  <section class="section hero">
-    <div class="container hero__grid">
-      <div class="hero__text">
-        <h1 class="h1">По работе и еда</h1>
-        <p class="subhead">Разная работа — разные принципы питания для продуктивности</p>
-        <p class="lead">
-          Мы подбираем питание под тип рабочей нагрузки, а не под универсальные советы
-        </p>
-
-        <div class="hero__actions">
-  <a class="btn btn--primary" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">
-    Открыть в Telegram
-  </a>
-  <a class="btn btn--ghost" href="#types">
-    Посмотреть типы работы
-  </a>
-</div>
-
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+    </div>
 
-      <div class="hero__visual" aria-hidden="true">
-        <div class="card card--visual">
-          <img src="./assets/scheme.svg" alt="" loading="eager" />
+    <div class="mobile-menu" hidden>
+      <div class="container mobile-menu__inner">
+        <a class="mobile-menu__link" href="#types">Типы работы</a>
+        <a class="mobile-menu__link" href="#how">Как устроено</a>
+        <a class="mobile-menu__link" href="#safety">Безопасность</a>
+        <a class="mobile-menu__link mobile-menu__link--cta" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть бота</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Блок 1: Hero -->
+    <section class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1 class="h1">По работе и еда</h1>
+          <p class="subhead">Разная работа — разные принципы питания для продуктивности</p>
+          <p class="lead">
+            Мы подбираем питание под тип рабочей нагрузки, а не под универсальные советы
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">
+              Открыть в Telegram
+            </a>
+            <a class="btn btn--ghost" href="#types">Посмотреть типы работы</a>
+          </div>
         </div>
-        <div class="hero__visual-note">
-          <span class="pill">разная работа</span>
-          <span class="pill">разная нагрузка</span>
-          <span class="pill">разное питание</span>
-          <span class="pill">разная продуктивность</span>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="card card--visual">
+            <img src="./assets/scheme.svg" alt="" loading="eager" />
+          </div>
+          <div class="hero__visual-note">
+            <span class="pill">разная работа</span>
+            <span class="pill">разная нагрузка</span>
+            <span class="pill">разное питание</span>
+            <span class="pill">разная продуктивность</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Блок 2 -->
-  <section class="section statement">
-    <div class="container">
-      <p class="quote reveal">
-        Одна и та же еда по-разному влияет<br />
-        на разные виды работы.
-      </p>
-    </div>
-  </section>
-
-  <!-- Блок 3 -->
-  <section class="section" id="types">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="h2">Типы работы</h2>
-        <p class="section__desc">
-          Мы смотрим не на «правильно/неправильно», а на то, какое состояние нужно под вашу нагрузку.
+    <!-- Блок 2: Ключевая мысль -->
+    <section class="section statement">
+      <div class="container">
+        <p class="quote reveal">
+          Одна и та же еда по-разному влияет<br />
+          на разные виды работы.
         </p>
       </div>
+    </section>
 
-      <div class="cards">
-        <article class="card card--type reveal">
-          <div class="card__top">
-            <div class="typeicon" aria-hidden="true" title="Фокус">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M9 18h6" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M8 14c-1.6-1-2.5-2.6-2.5-4.5A6.5 6.5 0 0 1 18.5 9.5c0 1.9-.9 3.5-2.5 4.5-.7.4-1 .9-1 1.7V18H9v-2.3c0-.8-.3-1.3-1-1.7Z" stroke-width="1.8" stroke-linejoin="round"/>
-              </svg>
+    <!-- Блок 3: Типы работы -->
+    <section class="section" id="types">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Типы работы</h2>
+          <p class="section__desc">
+            Мы смотрим не на «правильно/неправильно», а на то, какое состояние нужно под вашу нагрузку.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card card--type reveal">
+            <div class="card__top">
+              <div class="typeicon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18h6" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M8 14c-1.6-1-2.5-2.6-2.5-4.5A6.5 6.5 0 0 1 18.5 9.5c0 1.9-.9 3.5-2.5 4.5-.7.4-1 .9-1 1.7V18H9v-2.3c0-.8-.3-1.3-1-1.7Z" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="h3">Умственная работа</h3>
             </div>
-            <h3 class="h3">Умственная работа</h3>
-          </div>
-          <p class="card__text">Фокус, внимание, концентрация</p>
-          <div class="card__footer">
-            <span class="hint">Про состояние, а не про продукты</span>
-          </div>
-        </article>
-
-        <article class="card card--type reveal">
-          <div class="card__top">
-            <div class="typeicon" aria-hidden="true" title="Устойчивость">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 21s7-3 7-10V6l-7-3-7 3v5c0 7 7 10 7 10Z" stroke-width="1.8" stroke-linejoin="round"/>
-                <path d="M9.5 12.2 11 13.7 14.8 9.8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            <p class="card__text">Фокус, внимание, концентрация</p>
+            <div class="card__footer">
+              <span class="hint">Про состояние, а не про продукты</span>
             </div>
-            <h3 class="h3">Эмоциональная работа</h3>
-          </div>
-          <p class="card__text">Устойчивость, спокойствие, восстановление</p>
-          <div class="card__footer">
-            <span class="hint">Без “волшебных” советов</span>
-          </div>
-        </article>
+          </article>
 
-        <article class="card card--type reveal">
-          <div class="card__top">
-            <div class="typeicon" aria-hidden="true" title="Энергия">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M13 2 4 14h7l-1 8 10-14h-7l0-6Z" stroke-width="1.8" stroke-linejoin="round"/>
-              </svg>
+          <article class="card card--type reveal">
+            <div class="card__top">
+              <div class="typeicon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 21s7-3 7-10V6l-7-3-7 3v5c0 7 7 10 7 10Z" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M9.5 12.2 11 13.7 14.8 9.8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="h3">Эмоциональная работа</h3>
             </div>
-            <h3 class="h3">Физическая работа</h3>
-          </div>
-          <p class="card__text">Выносливость, энергия, восстановление</p>
-          <div class="card__footer">
-            <span class="hint">Простые корректировки</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+            <p class="card__text">Устойчивость, спокойствие, восстановление</p>
+            <div class="card__footer">
+              <span class="hint">Без “волшебных” советов</span>
+            </div>
+          </article>
 
-  <!-- Блок 4 -->
-  <section class="section soft">
-    <div class="container">
-      <div class="callout reveal">
-        <h2 class="h2">Почему “универсально” не работает</h2>
-        <p class="callout__text">
-          Большинство рекомендаций по питанию универсальны.<br />
-          Но работа и нагрузка у людей разные.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Блок 5 -->
-  <section class="section">
-    <div class="container">
-      <div class="callout callout--compact reveal">
-        <h2 class="h2">Наш подход</h2>
-        <p class="callout__text">
-          Мы подбираем питание под тип рабочей нагрузки,<br />
-          а не под абстрактное «полезно для всех».
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Блок 6 -->
-  <section class="section" id="how">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="h2">Как это реализовано</h2>
-        <p class="section__desc">
-          Простой сценарий: описали приём пищи → указали тип работы → получили пояснение влияния на состояние и аккуратные варианты корректировки.
-        </p>
-      </div>
-
-      <div class="how">
-        <div class="how__left reveal">
-          <ul class="steps">
-            <li class="steps__item"><span class="steps__dot"></span><span>Пользователь описывает приём пищи обычными словами</span></li>
-            <li class="steps__item"><span class="steps__dot"></span><span>Сервис учитывает тип рабочей нагрузки</span></li>
-            <li class="steps__item"><span class="steps__dot"></span><span>Объясняет возможное влияние на состояние</span></li>
-            <li class="steps__item"><span class="steps__dot"></span><span>Предлагает простые корректировки без усложнений</span></li>
-          </ul>
-
-          <a class="btn btn--primary" href="#examples">Посмотреть пример</a>
-        </div>
-
-        <div class="how__right reveal" id="examples">
-          <div class="shots">
-            <button class="shot-thumb is-active" type="button" data-shot="1">Диалог 1</button>
-            <button class="shot-thumb" type="button" data-shot="2">Диалог 2</button>
-          </div>
-
-          <div class="shot">
-            <!-- Поставь сюда свой файл: либо tg-1.png, либо bot_screen_no_bg.png -->
-            <img id="tgShot" src="./assets/bot_screen_no_bg.png" alt="Пример Telegram-диалога" loading="lazy" />
-            <p class="shot__note">Это пример сценария, без обещаний результата.</p>
-          </div>
+          <article class="card card--type reveal">
+            <div class="card__top">
+              <div class="typeicon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M13 2 4 14h7l-1 8 10-14h-7l0-6Z" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="h3">Физическая работа</h3>
+            </div>
+            <p class="card__text">Выносливость, энергия, восстановление</p>
+            <div class="card__footer">
+              <span class="hint">Простые корректировки</span>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Блок 7 -->
-  <section class="section soft">
-    <div class="container">
-      <div class="split">
-        <div class="panel reveal">
-          <h2 class="h2">Подходит</h2>
-          <ul class="list">
-            <li>умственная / эмоциональная / физическая работа</li>
-            <li>нужен простой формат</li>
-            <li>не хочется диет и сложных программ</li>
-          </ul>
-        </div>
-
-        <div class="panel panel--muted reveal">
-          <h2 class="h2">Не подходит</h2>
-          <ul class="list">
-            <li>медицинские задачи</li>
-            <li>лечение</li>
-            <li>строгие диеты</li>
-          </ul>
+    <!-- Блок 4: Проблема универсальных рекомендаций -->
+    <section class="section soft">
+      <div class="container">
+        <div class="callout reveal">
+          <h2 class="h2">Почему “универсально” не работает</h2>
+          <p class="callout__text">
+            Большинство рекомендаций по питанию универсальны.<br />
+            Но работа и нагрузка у людей разные.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Блок 8 -->
-  <section class="section" id="safety">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="h2">Безопасность и простота</h2>
-        <p class="section__desc">Формат сделан так, чтобы быть понятным и безопасным в использовании.</p>
+    <!-- Блок 5: Наш подход -->
+    <section class="section">
+      <div class="container">
+        <div class="callout callout--compact reveal">
+          <h2 class="h2">Наш подход</h2>
+          <p class="callout__text">
+            Мы подбираем питание под тип рабочей нагрузки,<br />
+            а не под абстрактное «полезно для всех».
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="checklist">
-        <div class="check reveal">не медицинская услуга</div>
-        <div class="check reveal">без диагнозов</div>
-        <div class="check reveal">без персональных медданных</div>
-        <div class="check reveal">без сложного внедрения</div>
-        <div class="check reveal">можно использовать лично и в компании</div>
+    <!-- Блок 6: Как реализовано -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Как это реализовано</h2>
+          <p class="section__desc">
+            Простой сценарий: описали приём пищи → указали тип работы → получили пояснение влияния на состояние и аккуратные варианты корректировки.
+          </p>
+        </div>
+
+        <div class="how">
+          <div class="how__left reveal">
+            <ul class="steps">
+              <li class="steps__item"><span class="steps__dot"></span><span>Пользователь описывает приём пищи обычными словами</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Сервис учитывает тип рабочей нагрузки</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Объясняет возможное влияние на состояние</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Предлагает простые корректировки без усложнений</span></li>
+            </ul>
+
+            <a class="btn btn--primary" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">
+              Попробовать в Telegram
+            </a>
+          </div>
+
+          <div class="how__right reveal" id="examples">
+            <div class="shots">
+              <button class="shot-thumb is-active" type="button" data-shot="1" aria-label="Пример диалога 1">Диалог 1</button>
+              <button class="shot-thumb" type="button" data-shot="2" aria-label="Пример диалога 2">Диалог 2</button>
+            </div>
+
+            <div class="shot">
+              <img id="tgShot" src="./assets/tg-1.svg" alt="Пример Telegram-диалога" loading="lazy" />
+              <p class="shot__note">Это пример сценария, без обещаний результата.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Блок 9 -->
-  <section class="section soft">
-    <div class="container">
-      <div class="about reveal">
-        <h2 class="h2">О проекте</h2>
-        <p>
-          Проект вырос из наблюдений за тем, как разные виды работы требуют разного подхода к питанию.
-          Мы сделали простой формат, который учитывает рабочую нагрузку, а не абстрактные советы.
-        </p>
+    <!-- Блок 7: Кому подходит / не подходит -->
+    <section class="section soft">
+      <div class="container">
+        <div class="split">
+          <div class="panel reveal">
+            <h2 class="h2">Подходит</h2>
+            <ul class="list">
+              <li>умственная / эмоциональная / физическая работа</li>
+              <li>нужен простой формат</li>
+              <li>не хочется диет и сложных программ</li>
+            </ul>
+          </div>
+
+          <div class="panel panel--muted reveal">
+            <h2 class="h2">Не подходит</h2>
+            <ul class="list">
+              <li>медицинские задачи</li>
+              <li>лечение</li>
+              <li>строгие диеты</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Блок 8: Безопасность и простота -->
+    <section class="section" id="safety">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Безопасность и простота</h2>
+          <p class="section__desc">Формат сделан так, чтобы быть понятным и безопасным в использовании.</p>
+        </div>
+
+        <div class="checklist">
+          <div class="check reveal">не медицинская услуга</div>
+          <div class="check reveal">без диагнозов</div>
+          <div class="check reveal">без персональных медданных</div>
+          <div class="check reveal">без сложного внедрения</div>
+          <div class="check reveal">можно использовать лично и в компании</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 9: О проекте -->
+    <section class="section soft">
+      <div class="container">
+        <div class="about reveal">
+          <h2 class="h2">О проекте</h2>
+          <p>
+            Проект вырос из наблюдений за тем, как разные виды работы требуют разного подхода к питанию.
+            Мы сделали простой формат, который учитывает рабочую нагрузку, а не абстрактные советы.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 10: Финальный CTA -->
+    <section class="section" id="cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__head">
+            <h2 class="h2">Понять, подойдёт ли формат</h2>
+            <p class="section__desc">
+              Откройте бота — он покажет сценарий на примере приёма пищи.
+            </p>
+          </div>
+
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">
+              Открыть бота в Telegram
+            </a>
+            <p class="form__note">Никаких рассылок и регистраций. Просто диалог.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> По работе и еда</span>
+      <span class="footer__sep">·</span>
+      <a class="footer__link" href="#top">Наверх</a>
     </div>
-  </section>
+  </footer>
 
-  <!-- Блок 10 -->
-  
-</main>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <span>© <span id="year"></span> По работе и еда</span>
-    <span class="footer__sep">·</span>
-    <a class="footer__link" href="#top">Наверх</a>
-  </div>
-</footer>
-
-<script src="./script.js" defer></script>
+  <script src="./script.js?v=21" defer></script>
 </body>
 </html>
