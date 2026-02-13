@@ -1,4 +1,6 @@
-// ===== Theme toggle =====
+// ===============================
+// Theme toggle (default: LIGHT)
+// ===============================
 const THEME_KEY = "pwye_theme";
 const htmlEl = document.documentElement;
 const themeBtn = document.querySelector(".theme-toggle");
@@ -10,50 +12,37 @@ function getSystemTheme() {
 }
 
 function applyTheme(theme) {
-  const root = document.documentElement;
-const savedTheme = localStorage.getItem("theme");
-
-// если в памяти ничего нет — ставим светлую
-const initialTheme = savedTheme ? savedTheme : "light";
-root.setAttribute("data-theme", initialTheme);
-
+  htmlEl.setAttribute("data-theme", theme);
 }
-
-const root = document.documentElement;
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme) {
-  root.setAttribute("data-theme", savedTheme);
-}
-
 
 function initTheme() {
+  // default is light (as requested)
   const saved = localStorage.getItem(THEME_KEY);
-  if (saved === "light" || saved === "dark") {
-    applyTheme(saved);
-  } else {
-    applyTheme(getSystemTheme());
-  }
+  const initial = (saved === "light" || saved === "dark") ? saved : "light";
+  applyTheme(initial);
 }
 
-themeBtn?.addEventListener("click", () => {
-  const current = htmlEl.getAttribute("data-theme") || getSystemTheme();
-  const next = current === "dark" ? "light" : "dark";
-  applyTheme(next);
-  localStorage.setItem(THEME_KEY, next);
-});
-
 // Disable transitions on first paint to avoid flash
-document.documentElement.classList.add("theme-no-anim");
+htmlEl.classList.add("theme-no-anim");
 requestAnimationFrame(() => {
   requestAnimationFrame(() => {
-    document.documentElement.classList.remove("theme-no-anim");
+    htmlEl.classList.remove("theme-no-anim");
   });
 });
 
 initTheme();
 
-// ===== Mobile menu =====
+themeBtn?.addEventListener("click", () => {
+  const current = htmlEl.getAttribute("data-theme") || "light";
+  const next = current === "dark" ? "light" : "dark";
+  applyTheme(next);
+  localStorage.setItem(THEME_KEY, next);
+});
+
+
+// ===============================
+// Mobile menu
+// ===============================
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileLinks = document.querySelectorAll(".mobile-menu__link");
@@ -69,7 +58,9 @@ burger?.addEventListener("click", () => {
   setMobileOpen(!isOpen);
 });
 
-mobileLinks.forEach((a) => a.addEventListener("click", () => setMobileOpen(false)));
+mobileLinks.forEach((a) =>
+  a.addEventListener("click", () => setMobileOpen(false))
+);
 
 document.addEventListener("click", (e) => {
   const isOpen = burger?.getAttribute("aria-expanded") === "true";
@@ -88,22 +79,32 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") setMobileOpen(false);
 });
 
-// ===== Reveal =====
-const revealEls = Array.from(document.querySelectorAll(".reveal"));
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("is-visible");
-        io.unobserve(e.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-revealEls.forEach((el) => io.observe(el));
 
-// ===== Screenshots switching (SVG) =====
+// ===============================
+// Reveal on scroll
+// ===============================
+const revealEls = Array.from(document.querySelectorAll(".reveal"));
+
+if (revealEls.length) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealEls.forEach((el) => io.observe(el));
+}
+
+
+// ===============================
+// Screenshots switching (SVG)
+// ===============================
 const tgShot = document.getElementById("tgShot");
 const shotBtns = Array.from(document.querySelectorAll(".shot-thumb"));
 
@@ -127,8 +128,10 @@ async function initShots() {
   const has1 = await checkImageExists(SHOTS["1"]);
   const has2 = await checkImageExists(SHOTS["2"]);
 
+  // Default to 1 if exists
   if (has1) tgShot.src = SHOTS["1"];
 
+  // Hide button 2 if no file
   const btn2 = shotBtns.find((b) => b.getAttribute("data-shot") === "2");
   if (!has2 && btn2) btn2.style.display = "none";
 
@@ -149,7 +152,10 @@ async function initShots() {
 }
 initShots();
 
-// ===== Form (demo) =====
+
+// ===============================
+// Form (demo)
+// ===============================
 const form = document.getElementById("leadForm");
 const result = document.getElementById("formResult");
 
@@ -166,13 +172,11 @@ form?.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const data = new FormData(form);
-  const payload = {
-    name: data.get("name")?.toString().trim(),
-    role: data.get("role")?.toString().trim(),
-    contact: data.get("contact")?.toString().trim(),
-  };
 
-  if (!payload.name || !payload.contact) {
+  const name = data.get("name")?.toString().trim();
+  const contact = data.get("contact")?.toString().trim();
+
+  if (!name || !contact) {
     if (result) result.textContent = "Заполните имя и контакт.";
     return;
   }
@@ -180,17 +184,18 @@ form?.addEventListener("submit", (e) => {
   if (result) {
     result.innerHTML =
       "Спасибо! Мы получили запрос от <b>" +
-      escapeHtml(payload.name) +
-      "</b>" +
-      (payload.role ? " (" + escapeHtml(payload.role) + ")" : "") +
-      
-      escapeHtml(payload.contact) +
+      escapeHtml(name) +
+      "</b>. Контакт: <b>" +
+      escapeHtml(contact) +
       "</b>.";
   }
 
   form.reset();
 });
 
+
+// ===============================
 // Year
+// ===============================
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
