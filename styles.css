@@ -824,3 +824,22 @@ html[data-theme="dark"] .footer{
 @media (max-width: 820px){
   .pricing{ grid-template-columns: 1fr; }
 }
+
+/* === Global background gradient (minimal, premium) === */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+
+  background:
+    linear-gradient(120deg,
+      rgba(27,143,80,.28) 3%,
+      rgba(228,176,74,.22) 60%,
+      rgba(251,251,252,0) 100%
+    );
+}
+
+
+
