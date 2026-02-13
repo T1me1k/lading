@@ -65,7 +65,7 @@
   </header>
 
   <main id="top">
-    <!-- Блок 1: Hero (обновлён) -->
+    <!-- Блок 1: Hero -->
     <section class="section hero">
       <div class="container hero__grid">
         <div class="hero__text">
@@ -79,12 +79,8 @@
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#pricing">
-              Выбрать тариф
-            </a>
-            <a class="btn btn--ghost" href="#how">
-              Посмотреть пример
-            </a>
+            <a class="btn btn--primary" href="#pricing">Выбрать тариф</a>
+            <a class="btn btn--ghost" href="#how">Посмотреть пример</a>
           </div>
 
           <!-- 3 буллета "что получу" -->
@@ -145,7 +141,7 @@
               <div class="price-card__price">499 ₽</div>
             </div>
             <p class="price-card__desc">Стартовая программа и первые корректировки.</p>
-            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot">Купить</a>
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Купить</a>
           </article>
 
           <article class="price-card reveal">
@@ -154,7 +150,7 @@
               <div class="price-card__price">1 299 ₽</div>
             </div>
             <p class="price-card__desc">Настройка под ритм работы и привычки.</p>
-            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot">Купить</a>
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Купить</a>
           </article>
 
           <article class="price-card reveal">
@@ -163,7 +159,7 @@
               <div class="price-card__price">2 499 ₽</div>
             </div>
             <p class="price-card__desc">Долгий цикл: спокойная адаптация и поддержка.</p>
-            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot">Купить</a>
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Купить</a>
           </article>
 
           <article class="price-card price-card--best reveal">
@@ -172,7 +168,7 @@
               <div class="price-card__price">4 499 ₽</div>
             </div>
             <p class="price-card__desc">Максимально выгодный формат сопровождения.</p>
-            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot">Купить</a>
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Купить</a>
           </article>
         </div>
 
@@ -184,7 +180,7 @@
       </div>
     </section>
 
-    <!-- Блок 3: Типы работы -->
+    <!-- Блок 3: Типы работы (с картинками) -->
     <section class="section" id="types">
       <div class="container">
         <div class="section__head">
@@ -196,13 +192,11 @@
 
         <div class="cards">
           <article class="card card--type reveal">
+            <div class="typeimg" aria-hidden="true">
+              <img src="./assets/type-mental.png" alt="Умственная работа" loading="lazy" />
+            </div>
+
             <div class="card__top">
-              <div class="typeicon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18h6" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M8 14c-1.6-1-2.5-2.6-2.5-4.5A6.5 6.5 0 0 1 18.5 9.5c0 1.9-.9 3.5-2.5 4.5-.7.4-1 .9-1 1.7V18H9v-2.3c0-.8-.3-1.3-1-1.7Z" stroke-width="1.8" stroke-linejoin="round"/>
-                </svg>
-              </div>
               <h3 class="h3">Умственная работа</h3>
             </div>
             <p class="card__text">Фокус, внимание, концентрация</p>
@@ -212,13 +206,11 @@
           </article>
 
           <article class="card card--type reveal">
+            <div class="typeimg" aria-hidden="true">
+              <img src="./assets/type-emotional.png" alt="Эмоциональная работа" loading="lazy" />
+            </div>
+
             <div class="card__top">
-              <div class="typeicon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M12 21s7-3 7-10V6l-7-3-7 3v5c0 7 7 10 7 10Z" stroke-width="1.8" stroke-linejoin="round"/>
-                  <path d="M9.5 12.2 11 13.7 14.8 9.8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
               <h3 class="h3">Эмоциональная работа</h3>
             </div>
             <p class="card__text">Устойчивость, спокойствие, восстановление</p>
@@ -228,12 +220,11 @@
           </article>
 
           <article class="card card--type reveal">
+            <div class="typeimg" aria-hidden="true">
+              <img src="./assets/type-physical.png" alt="Физическая работа" loading="lazy" />
+            </div>
+
             <div class="card__top">
-              <div class="typeicon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M13 2 4 14h7l-1 8 10-14h-7l0-6Z" stroke-width="1.8" stroke-linejoin="round"/>
-                </svg>
-              </div>
               <h3 class="h3">Физическая работа</h3>
             </div>
             <p class="card__text">Выносливость, энергия, восстановление</p>
@@ -242,6 +233,11 @@
             </div>
           </article>
         </div>
+
+        <!-- подсказка: убедись, что имена файлов совпадают -->
+        <!-- ./assets/type-mental.png -->
+        <!-- ./assets/type-emotional.png -->
+        <!-- ./assets/type-physical.png -->
       </div>
     </section>
 
@@ -289,8 +285,6 @@
               <li class="steps__item"><span class="steps__dot"></span><span>Объясняет возможное влияние на состояние</span></li>
               <li class="steps__item"><span class="steps__dot"></span><span>Предлагает простые корректировки без усложнений</span></li>
             </ul>
-
-           
           </div>
 
           <div class="how__right reveal" id="examples">
@@ -364,8 +358,36 @@
       </div>
     </section>
 
-    <!-- Блок: Контакт / обратная связь -->
-    
+    <!-- Блок: Контакт / обратная связь (без “операторов”) -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__head">
+            <h2 class="h2">Индивидуальная настройка по обратной связи</h2>
+            <p class="section__desc">
+              Оставьте контакт — мы напишем в Telegram и уточним 2–3 вопроса, чтобы подстроить программу под ваш ритм.
+            </p>
+          </div>
+
+          <form class="form" id="leadForm">
+            <label class="field">
+              <span class="field__label">Имя</span>
+              <input class="input" name="name" type="text" autocomplete="name" placeholder="Например, Михаил" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Контакт (Telegram или телефон)</span>
+              <input class="input" name="contact" type="text" placeholder="@username или +7..." required />
+            </label>
+
+            <button class="btn btn--primary btn--block" type="submit">Оставить контакт</button>
+            <p class="form__note">Без рассылок. Только для связи по вашему запросу.</p>
+
+            <div class="form__result" id="formResult" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
