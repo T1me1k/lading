@@ -10,7 +10,13 @@ function getSystemTheme() {
 }
 
 function applyTheme(theme) {
-  htmlEl.setAttribute("data-theme", theme);
+  const root = document.documentElement;
+const savedTheme = localStorage.getItem("theme");
+
+// если в памяти ничего нет — ставим светлую
+const initialTheme = savedTheme ? savedTheme : "light";
+root.setAttribute("data-theme", initialTheme);
+
 }
 
 const root = document.documentElement;
