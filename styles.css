@@ -843,3 +843,51 @@ body::before{
 
 
 
+/* Hero bullets (left bottom) */
+.hero__bullets{
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+.hero__bullet{
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 10px 24px rgba(11,18,32,.06);
+}
+html[data-theme="dark"] .hero__bullet{
+  background: rgba(15,22,32,.70);
+}
+
+/* Right white card: brighter + more readable */
+.hero__visual .card--visual{
+  background: rgba(255,255,255,.98);
+  border-color: rgba(11,18,32,.10);
+  box-shadow: 0 22px 60px rgba(11,18,32,.14);
+}
+html[data-theme="dark"] .hero__visual .card--visual{
+  background: rgba(15,22,32,.92);
+  border-color: rgba(255,255,255,.12);
+  box-shadow: 0 26px 70px rgba(0,0,0,.55);
+}
+
+/* Optional: make text inside right card more contrast */
+.hero__visual .hero-visual__title{
+  color: var(--text);
+  font-weight: 750;
+  letter-spacing: var(--tracking);
+}
+.hero__visual .hero-visual__desc{
+  color: var(--muted);
+  font-size: 13.5px;
+}
+.hero__visual .hero-visual__list{
+  color: var(--text);
+}
+.hero__visual .hero-visual__list li{
+  color: var(--text);
+}
+.hero__visual .hero-visual__list li strong{
+  color: var(--text);
+}
