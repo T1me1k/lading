@@ -891,3 +891,30 @@ html[data-theme="dark"] .hero__visual .card--visual{
 .hero__visual .hero-visual__list li strong{
   color: var(--text);
 }
+
+/* =========================
+   HERO SCHEME FIX
+   ========================= */
+
+/* Делаем правую карточку шире и ярче */
+.hero__visual .card--visual{
+  background: rgba(255,255,255,.98);
+  border-color: rgba(11,18,32,.10);
+  box-shadow: 0 22px 60px rgba(11,18,32,.14);
+  padding: 28px;
+  overflow: hidden; /* чтобы схема не вылезала */
+}
+
+/* Увеличиваем и сдвигаем схему вправо */
+.hero__visual .card--visual img{
+  width: 115%;
+  max-width: none;
+  transform: translateX(-30px);
+}
+
+/* Темная тема */
+html[data-theme="dark"] .hero__visual .card--visual{
+  background: rgba(15,22,32,.92);
+  border-color: rgba(255,255,255,.12);
+  box-shadow: 0 26px 70px rgba(0,0,0,.55);
+}
