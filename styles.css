@@ -835,3 +835,46 @@ html[data-theme="dark"] .footer{
   .quote::before{ left:-12px; }
   .brand__logo{ width:44px; height:44px; }
 }
+/* =========================
+   Add-ons (final)
+========================= */
+
+/* Pricing note pills row */
+.pricing__note{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:14px 0 0;
+}
+
+/* Keyboard focus (a11y) */
+:focus-visible{
+  outline: 3px solid rgba(27,143,80,.35);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+html[data-theme="dark"] :focus-visible{
+  outline-color: rgba(228,176,74,.35);
+}
+
+/* Hover only for mouse devices (prevents sticky hover on touch) */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{ transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+  .hero-type-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .card--type:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .footer__link:hover{ transform: translateY(-1px); }
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:12px;
+  padding:10px 12px;
+  border-radius:12px;
+  background: var(--surface);
+  border:1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+}
+.skip-link:focus{ left:12px; }
