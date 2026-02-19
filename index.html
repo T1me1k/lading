@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>По работе и еда</title>
-  <meta name="description" content="Персональная программа питания под вашу рабочую нагрузку. Фиксированные тарифы и обратная связь. Формат — Telegram." />
+  <meta name="description" content="Персональная программа питания под вашу рабочую нагрузку. Фиксированные тарифы. Формат — Telegram." />
 
-  <!-- Favicon (one is enough) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/favicon-512.png?v=1">
   <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon-512.png?v=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=6">
+  <link rel="stylesheet" href="./styles.css?v=7">
 </head>
 
 <body>
@@ -63,60 +63,59 @@
   </header>
 
   <main id="top">
-    <!-- Блок 1: Hero -->
-    <section class="section hero">
-      <div class="container hero__grid">
+    <!-- HERO: меньше текста + 3 картинки (цепляющий экран) -->
+    <section class="section hero hero--full">
+      <div class="container hero__stack">
         <div class="hero__text">
-          <h1 class="h1 hero-title">Программа питания под вашу работу</h1>
+          <h1 class="h1 hero-title hero-title--big">Программа питания под вашу работу</h1>
 
-          <p class="subhead">Подбираем подход под тип нагрузки: фокус, устойчивость или энергия</p>
-
-          <p class="lead">
-            Вы описываете приём пищи и рабочую нагрузку — мы составляем программу и корректируем её по обратной связи.
-            Простым языком, без медицинских терминов и «универсальных советов».
+          <p class="subhead hero__subhead">
+            Подбираем питание под нагрузку — чтобы было больше фокуса, устойчивости и энергии.
           </p>
 
           <div class="hero__actions">
             <a class="btn btn--primary" href="#pricing">Выбрать тариф</a>
             <a class="btn btn--ghost" href="#how">Посмотреть пример</a>
           </div>
-
-          <!-- 3 буллета "что получу" -->
-          <div class="hero__bullets reveal">
-            <div class="hero__bullet">
-              <strong>Персональная программа</strong><br />
-              под ваш тип работы и режим дня
-            </div>
-            <div class="hero__bullet">
-              <strong>Понятные корректировки</strong><br />
-              без диет и сложных правил
-            </div>
-            <div class="hero__bullet">
-              <strong>Обратная связь</strong><br />
-              можно уточнить и подстроить под себя
-            </div>
-            <div class="hero__bullet">
-    <strong>Корректировки, которые можно применить сразу — без диет</strong><br />
-    + избавление от лишнего веса
-  </div>
-          </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="card card--visual">
-            <img src="./assets/scheme.svg" alt="" loading="eager" />
-          </div>
-          <div class="hero__visual-note">
-            <span class="pill">разная работа</span>
-            <span class="pill">разная нагрузка</span>
-            <span class="pill">разное питание</span>
-            <span class="pill">разная продуктивность</span>
-          </div>
+        <!-- 3 картинки типов работ -->
+        <div class="hero-types" id="types">
+          <article class="hero-type-card reveal">
+            <div class="hero-type-card__img">
+              <img src="./assets/type-mental.png" alt="Умственная работа" loading="lazy" />
+            </div>
+            <h3 class="h3">Умственная работа</h3>
+            <p class="hero-type-card__desc">Фокус, внимание, концентрация</p>
+          </article>
+
+          <article class="hero-type-card reveal">
+            <div class="hero-type-card__img">
+              <img src="./assets/type-emotional.png" alt="Эмоциональная работа" loading="lazy" />
+            </div>
+            <h3 class="h3">Эмоциональная работа</h3>
+            <p class="hero-type-card__desc">Устойчивость, спокойствие, восстановление</p>
+          </article>
+
+          <article class="hero-type-card reveal">
+            <div class="hero-type-card__img">
+              <img src="./assets/type-physical.png" alt="Физическая работа" loading="lazy" />
+            </div>
+            <h3 class="h3">Физическая работа</h3>
+            <p class="hero-type-card__desc">Энергия, выносливость, восстановление</p>
+          </article>
+        </div>
+
+        <!-- короткий блок выгод (вместо полотна/лишних буллетов) -->
+        <div class="hero-benefits reveal" aria-label="Что вы получите">
+          <div class="hero-benefit">Понимание, какая еда поддерживает именно вашу рабочую нагрузку</div>
+          <div class="hero-benefit">Меньше усталости и «проседаний» в течение дня</div>
+          <div class="hero-benefit">Корректировки, которые можно применить сразу — без диет</div>
         </div>
       </div>
     </section>
 
-    <!-- Блок 2: Ключевая мысль -->
+    <!-- Ключевая мысль (можно оставить) -->
     <section class="section statement">
       <div class="container">
         <p class="quote reveal">
@@ -126,7 +125,7 @@
       </div>
     </section>
 
-    <!-- Блок: Цены -->
+    <!-- Цены -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section__head">
@@ -182,110 +181,70 @@
       </div>
     </section>
 
-    <!-- Блок 3: Типы работы (с картинками) -->
-    <section class="section" id="types">
+    <!-- Типы работы (детальнее, если хочешь оставить) -->
+    <section class="section" id="types-details">
       <div class="container">
         <div class="section__head">
-          <h2 class="h2">Типы работы</h2>
+          <h2 class="h2">Как мы учитываем тип работы</h2>
           <p class="section__desc">
-            Мы смотрим не на «правильно/неправильно», а на то, какое состояние нужно под вашу нагрузку.
+            Смотрим не на «правильно/неправильно», а на то, какое состояние нужно под вашу нагрузку.
           </p>
         </div>
 
         <div class="cards">
           <article class="card card--type reveal">
-            <div class="typeimg" aria-hidden="true">
-              <img src="./assets/type-mental.png" alt="Умственная работа" loading="lazy" />
-            </div>
-
             <div class="card__top">
               <h3 class="h3">Умственная работа</h3>
             </div>
             <p class="card__text">Фокус, внимание, концентрация</p>
-            <div class="card__footer">
-           
-            </div>
           </article>
 
           <article class="card card--type reveal">
-            <div class="typeimg" aria-hidden="true">
-              <img src="./assets/type-emotional.png" alt="Эмоциональная работа" loading="lazy" />
-            </div>
-
             <div class="card__top">
               <h3 class="h3">Эмоциональная работа</h3>
             </div>
             <p class="card__text">Устойчивость, спокойствие, восстановление</p>
-            <div class="card__footer">
-            
-            </div>
           </article>
 
           <article class="card card--type reveal">
-            <div class="typeimg" aria-hidden="true">
-              <img src="./assets/type-physical.png" alt="Физическая работа" loading="lazy" />
-            </div>
-
             <div class="card__top">
               <h3 class="h3">Физическая работа</h3>
             </div>
-            <p class="card__text">Выносливость, энергия, восстановление</p>
-            <div class="card__footer">
-              
-            </div>
+            <p class="card__text">Энергия, выносливость, восстановление</p>
           </article>
         </div>
-
-        <!-- подсказка: убедись, что имена файлов совпадают -->
-        <!-- ./assets/type-mental.png -->
-        <!-- ./assets/type-emotional.png -->
-        <!-- ./assets/type-physical.png -->
       </div>
     </section>
 
-    <!-- Блок 4: Проблема универсальных рекомендаций -->
+    <!-- Наш подход (оставляем) -->
     <section class="section soft">
-      <div class="container">
-        <div class="callout reveal">
-          <h2 class="h2">Почему “универсально” не работает</h2>
-          <p class="callout__text">
-            Большинство рекомендаций по питанию универсальны.<br />
-            Но работа и нагрузка у людей разные.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Блок 5: Наш подход -->
-    <section class="section">
       <div class="container">
         <div class="callout callout--compact reveal">
           <h2 class="h2">Наш подход</h2>
           <p class="callout__text">
-            Мы подбираем питание под тип рабочей нагрузки,<br />
-            а не под абстрактное «полезно для всех».
+            Вы описываете приём пищи и рабочую нагрузку — мы даём понятные корректировки под ваш режим.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Блок 6: Как реализовано -->
+    <!-- Как реализовано (оставляем steps + примеры, без схемы) -->
     <section class="section" id="how">
       <div class="container">
         <div class="section__head">
-          <h2 class="h2">Как это реализовано</h2>
+          <h2 class="h2">Как это устроено</h2>
           <p class="section__desc">
-            Простой сценарий: описали приём пищи → указали тип работы → получили пояснение влияния на состояние и аккуратные варианты корректировки.
+            Описали еду → указали тип работы → получили пояснение и варианты корректировки.
           </p>
         </div>
 
         <div class="how">
           <div class="how__left reveal">
             <ul class="steps">
-              <li class="steps__item"><span class="steps__dot"></span><span>Пользователь описывает приём пищи обычными словами</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span>Сервис учитывает тип рабочей нагрузки</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span>Объясняет возможное влияние на состояние</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span>Предлагает простые корректировки без усложнений</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Описываете приём пищи обычными словами</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Указываете тип рабочей нагрузки</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Получаете объяснение влияния на состояние</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span>Получаете корректировки, которые можно применить сразу</span></li>
             </ul>
           </div>
 
@@ -304,32 +263,7 @@
       </div>
     </section>
 
-    <!-- Блок 7: Кому подходит / не подходит -->
-    <section class="section soft">
-      <div class="container">
-        <div class="split">
-          <div class="panel reveal">
-            <h2 class="h2">Подходит</h2>
-            <ul class="list">
-              <li>умственная / эмоциональная / физическая работа</li>
-              <li>нужен простой формат</li>
-              <li>не хочется диет и сложных программ</li>
-            </ul>
-          </div>
-
-          <div class="panel panel--muted reveal">
-            <h2 class="h2">Не подходит</h2>
-            <ul class="list">
-              <li>медицинские задачи</li>
-              <li>лечение</li>
-              <li>строгие диеты</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Блок 8: Безопасность и простота -->
+    <!-- Безопасность -->
     <section class="section" id="safety">
       <div class="container">
         <div class="section__head">
@@ -347,7 +281,7 @@
       </div>
     </section>
 
-    <!-- Блок 9: О проекте -->
+    <!-- О проекте -->
     <section class="section soft">
       <div class="container">
         <div class="about reveal">
@@ -359,18 +293,15 @@
         </div>
       </div>
     </section>
-
-    
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
       <span>© <span id="year"></span> По работе и еда</span>
-    
       <a class="footer__link" href="#top">Наверх</a>
     </div>
   </footer>
 
-  <script src="./script.js?v=22" defer></script>
+  <script src="./script.js?v=23" defer></script>
 </body>
 </html>
