@@ -1,13 +1,8 @@
 // script.js (final)
-// Theme + mobile menu + reveal + examples + year
+// Theme + mobile menu + reveal + dialogs tabs + year
 (() => {
   "use strict";
 
-  // ===============================
-  // Theme toggle (default: LIGHT)
-  // + saves to localStorage
-  // + disables transitions on first paint (anti-flash)
-  // ===============================
   const THEME_KEY = "pwye_theme";
   const htmlEl = document.documentElement;
   const themeBtn = document.querySelector(".theme-toggle");
@@ -22,7 +17,7 @@
     applyTheme(initial);
   }
 
-  // Remove no-anim after first paint (if it was set in <head> inline script)
+  // Remove no-anim after first paint (set in <head>)
   requestAnimationFrame(() => {
     requestAnimationFrame(() => htmlEl.classList.remove("theme-no-anim"));
   });
@@ -36,12 +31,7 @@
     localStorage.setItem(THEME_KEY, next);
   });
 
-  // ===============================
-  // Mobile menu (burger)
-  // + closes on outside click
-  // + closes on Escape
-  // + closes after link click
-  // ===============================
+  // Mobile menu
   const burger = document.querySelector(".burger");
   const mobileMenu = document.querySelector(".mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-menu__link");
@@ -66,10 +56,9 @@
     const target = e.target;
     if (!(target instanceof Node)) return;
 
-    const clickedBurger = burger.contains(target);
-    const clickedMenu = mobileMenu.contains(target);
-
-    if (!clickedBurger && !clickedMenu) setMobileOpen(false);
+    if (!burger.contains(target) && !mobileMenu.contains(target)) {
+      setMobileOpen(false);
+    }
   });
 
   document.addEventListener("keydown", (e) => {
@@ -78,9 +67,7 @@
     if (e.key === "Escape") setMobileOpen(false);
   });
 
-  // ===============================
-  // Reveal on scroll (IntersectionObserver)
-  // ===============================
+  // Reveal
   const revealEls = Array.from(document.querySelectorAll(".reveal"));
   if (revealEls.length) {
     if ("IntersectionObserver" in window) {
@@ -95,68 +82,37 @@
         },
         { threshold: 0.12 }
       );
-
       revealEls.forEach((el) => io.observe(el));
     } else {
       revealEls.forEach((el) => el.classList.add("is-visible"));
     }
   }
 
-  // ===============================
-  // Screenshots switching (SVG)
-  // - checks if file exists
-  // - hides button 2 if missing
-  // ===============================
-  const tgShot = document.getElementById("tgShot");
-  const shotBtns = Array.from(document.querySelectorAll(".shot-thumb"));
+  // Dialog tabs (Диалог 1 / 2)
+  const dialogBtns = Array.from(document.querySelectorAll("[data-dialog]"));
+  const panes = Array.from(document.querySelectorAll("[data-dialog-pane]"));
 
-  const SHOTS = {
-    "1": "./assets/tg-1.svg",
-    "2": "./assets/tg-2.svg",
-  };
+  function setDialog(id) {
+    dialogBtns.forEach((b) => {
+      const active = b.getAttribute("data-dialog") === id;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
 
-  function checkImageExists(src) {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.onload = () => resolve(true);
-      img.onerror = () => resolve(false);
-      img.src = src;
+    panes.forEach((p) => {
+      const active = p.getAttribute("data-dialog-pane") === id;
+      p.classList.toggle("is-active", active);
     });
   }
 
-  async function initShots() {
-    if (!tgShot || shotBtns.length === 0) return;
-
-    const [has1, has2] = await Promise.all([
-      checkImageExists(SHOTS["1"]),
-      checkImageExists(SHOTS["2"]),
-    ]);
-
-    if (has1) tgShot.src = SHOTS["1"];
-
-    const btn2 = shotBtns.find((b) => b.getAttribute("data-shot") === "2");
-    if (!has2 && btn2) btn2.style.display = "none";
-
-    shotBtns.forEach((btn) => {
-      btn.addEventListener("click", async () => {
-        const id = btn.getAttribute("data-shot");
-        const src = id ? SHOTS[id] : null;
-        if (!src || !tgShot) return;
-
-        const ok = await checkImageExists(src);
-        if (!ok) return;
-
-        shotBtns.forEach((b) => b.classList.remove("is-active"));
-        btn.classList.add("is-active");
-        tgShot.src = src;
-      });
+  dialogBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-dialog");
+      if (id) setDialog(id);
     });
-  }
-  initShots();
+  });
 
-  // ===============================
   // Year
-  // ===============================
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();

@@ -878,3 +878,137 @@ html[data-theme="dark"] :focus-visible{
   z-index: 1000;
 }
 .skip-link:focus{ left:12px; }
+
+/* =========================
+   Add-ons (final)
+========================= */
+
+/* Pricing note pills row */
+.pricing__note{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:14px 0 0;
+}
+
+/* Hero note blocks under images */
+.hero-note{
+  border: 1px solid var(--line);
+  border-radius: var(--radius2);
+  background: var(--surface2);
+  box-shadow: var(--shadow-sm);
+  padding: 16px 18px;
+}
+.hero-note__line{
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: var(--tracking);
+}
+.hero-note__hr{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 90ch;
+}
+
+/* How single-column (no right block) */
+.how--single{
+  grid-template-columns: 1fr;
+}
+
+/* Dialogs */
+.dialog{
+  padding: 18px;
+}
+.dialog__tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom: 12px;
+}
+.dialog__body{
+  border: 1px solid var(--line);
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,.70);
+  padding: 14px;
+}
+html[data-theme="dark"] .dialog__body{
+  background: rgba(15,22,32,.65);
+}
+.dialog__pane{
+  display:none;
+}
+.dialog__pane.is-active{
+  display:block;
+}
+
+/* Chat bubbles */
+.chat{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.bubble{
+  border: 1px solid var(--line);
+  background: var(--surface2);
+  border-radius: 18px;
+  padding: 12px 12px;
+  box-shadow: 0 10px 24px rgba(11,18,32,.06);
+}
+.bubble__title{
+  font-weight: 800;
+  letter-spacing: var(--tracking);
+  margin-bottom: 6px;
+}
+.bubble p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.8px;
+  line-height: 1.45;
+}
+.mono{
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+/* Pricing: 2 columns on desktop */
+.pricing--two{
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 820px){
+  .pricing--two{ grid-template-columns: 1fr; }
+}
+
+/* Keyboard focus (a11y) */
+:focus-visible{
+  outline: 3px solid rgba(27,143,80,.35);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+html[data-theme="dark"] :focus-visible{
+  outline-color: rgba(228,176,74,.35);
+}
+
+/* Hover only for mouse devices (prevents sticky hover on touch) */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{ transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+  .hero-type-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .card--type:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .footer__link:hover{ transform: translateY(-1px); }
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:12px;
+  padding:10px 12px;
+  border-radius:12px;
+  background: var(--surface);
+  border:1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+}
+.skip-link:focus{ left:12px; }
