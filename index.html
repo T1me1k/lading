@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>По работе и еда</title>
-  <meta name="description" content="Корректировка приёмов пищи под тип работы и нагрузку. Формат — Telegram. Поддержка сотрудников без инфраструктуры и больших затрат." />
+  <meta name="description" content="Корректировка приёмов пищи под тип работы и нагрузку. Формат — Telegram." />
 
   <!-- Theme pre-init (prevents flash) -->
   <script>
@@ -19,13 +19,14 @@
     })();
   </script>
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/favicon-512.png?v=1">
   <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon-512.png?v=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=9">
+  <link rel="stylesheet" href="./styles.css?v=10">
 </head>
 
 <body>
@@ -77,19 +78,20 @@
   </header>
 
   <main id="top">
-    <!-- HERO: заголовок + 3 картинки + подписи -->
+    <!-- HERO -->
     <section class="section hero hero--full">
       <div class="container hero__stack">
         <div class="hero__text">
-          <h1 class="h1 hero-title hero-title--big">Корректировка ваших приёмов пищи под тип вашей работы и нагрузки</h1>
+          <h1 class="h1 hero-title hero-title--big">
+            Корректировка ваших приёмов пищи под тип вашей работы и нагрузки
+          </h1>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#pricing">Посмотреть стоимость</a>
-            <a class="btn btn--ghost" href="#dialogs">Посмотреть примеры</a>
-          </div>
+          <p class="hero-kicker reveal">
+            Не диеты и не спорт — а подпитываем в течение дня именно то, что нагружаем.
+          </p>
         </div>
 
-        <!-- 3 картинки типов работ (без изменений) -->
+        <!-- 3 картинки -->
         <div class="hero-types" id="types">
           <article class="hero-type-card reveal">
             <div class="hero-type-card__img">
@@ -116,13 +118,12 @@
           </article>
         </div>
 
-        <div class="hero-note reveal">
-          <p class="hero-note__line">Не диеты и не спорт — а подпитываем в течение дня именно то, что нагружаем.</p>
-          <p class="hero-note__hr">
-            HR — простой цифровой формат поддержки сотрудников: уменьшение скрытой усталости и спадов энергии у команды
-            без инфраструктуры и больших затрат.
-          </p>
-        </div>
+        <p class="hero-hr reveal">
+          <span class="hero-hr__tag">HR</span>
+          <span class="hero-hr__text">
+            — простой цифровой формат поддержки сотрудников: уменьшение скрытой усталости и спадов энергии у команды без инфраструктуры и больших затрат.
+          </span>
+        </p>
       </div>
     </section>
 
@@ -131,7 +132,9 @@
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Безопасность и простота</h2>
-          <p class="section__desc">Формат сделан так, чтобы быть понятным и безопасным в использовании.</p>
+          <p class="section__desc">
+            Формат сделан так, чтобы быть понятным и безопасным в использовании.
+          </p>
         </div>
 
         <div class="checklist">
@@ -157,163 +160,12 @@
             <ul class="steps">
               <li class="steps__item"><span class="steps__dot"></span><span><b>Заполняем анкету</b> (работа и нагрузка вне неё)</span></li>
               <li class="steps__item"><span class="steps__dot"></span><span><b>Вводим приём пищи</b> (текст, голос, фото)</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span><b>Получаете подсчёт БЖУ</b> по приёму + видите норму на день (формула Миффлина–Сан Жеора) и остаток</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span><b>Понятное объяснение</b>, как еда влияет на рабочее состояние + корректировки, чтобы подпитывала нагрузку, а не вызывала сонливость</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span><b>В конце дня</b> — разбор всех приёмов с нутрициологическим объяснением + меню на следующий день</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span><b>В конце недели</b> — полный разбор с объяснением сильных и слабых сторон</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span><b>Учитывается вода</b> — количество выпитой чистой воды вносится отдельно</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Получаете подсчёт БЖУ</b> + норму на день (формула Миффлина–Сан Жеора) и остаток</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Понятное объяснение</b> влияния еды + корректировки</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>В конце дня</b> — разбор и меню на завтра</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>В конце недели</b> — полный разбор</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Учитывается вода</b> — вносится отдельно</span></li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Диалоги -->
-    <section class="section" id="dialogs">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Примеры диалогов</h2>
-          <p class="section__desc">Как выглядит разбор приёма пищи и итог дня.</p>
-        </div>
-
-        <div class="dialog card reveal">
-          <div class="dialog__tabs" role="tablist" aria-label="Переключатель примеров">
-            <button class="shot-thumb is-active" type="button" data-dialog="1" role="tab" aria-selected="true">Диалог 1</button>
-            <button class="shot-thumb" type="button" data-dialog="2" role="tab" aria-selected="false">Диалог 2</button>
-          </div>
-
-          <div class="dialog__body">
-            <article class="dialog__pane is-active" data-dialog-pane="1" role="tabpanel">
-              <div class="chat">
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">🍱 Энергетическая ценность твоей еды:</div>
-                  <div class="mono">
-🔥 Калории: 556
-💪 Белки: 62.0 г
-🧈 Жиры: 5.0 г
-🍞 Углеводы: 66.0 г
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">⚡ Полученные КЖБУ за день / Суточная норма:</div>
-                  <div class="mono">
-🔥 Калории: 556 / 2200
-💪 Белки: 62.0 / 150.0 г
-🧈 Жиры: 5.0 / 70.0 г
-🍞 Углеводы: 66.0 / 250.0 г
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">🍽 Обед — Энергия для концентрации</div>
-                  <p>Обед важен для поддержания фокуса и энергии в течение рабочего дня. В это время особенно важно сбалансировать белки, углеводы и клетчатку, чтобы избежать усталости и повысить продуктивность.</p>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">⚖️ Энергетический баланс</div>
-                  <div class="mono">
-- Белки: 250 г тилапии — хороший источник качественного белка.
-- Жиры: в данном приёме не указаны источники жиров.
-- Углеводы: 200 г картофеля и 1 банан — быстрые углеводы (возможен спад).
-- Вода 💧: Всего за день: 0 мл из 2000 мл.
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">✅ Оценка приёма</div>
-                  <div class="mono">
-- 🟡 Хорошо — базовый баланс есть, но требуется коррекция.
-Плюсы: ✓ Тилапия и стручковая фасоль дают белок и клетчатку.
-Минусы: ✗ Картофель и банан — быстрые углеводы (возможна усталость).
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">🎯 Что это даст твоей работе</div>
-                  <p>Сейчас возможен прилив энергии, но через 1–2 часа вероятна сонливость и падение концентрации из-за резкого снижения сахара.</p>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">💡 Профессиональный лайфхак</div>
-                  <p>Попробуй заменить картофель на киноа или гречку — это даст сложные углеводы и больше клетчатки.</p>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">🧠 Физиология простыми словами</div>
-                  <p>Быстрые углеводы — как толпа фанатов: сначала много энергии, потом все расходятся. Клетчатка — “дворник”, который помогает организму работать плавно.</p>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">🥗 Рекомендация</div>
-                  <div class="mono">
-1) Заменить картофель на киноа/гречку.
-2) Добавить немного оливкового масла к фасоли для полезных жиров.
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">💡 Мини-совет</div>
-                  <p>Пей больше воды в течение дня — это помогает поддерживать энергию и концентрацию.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="dialog__pane" data-dialog-pane="2" role="tabpanel">
-              <div class="chat">
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">#РАЗБОР_ДНЯ</div>
-                  <p>День оставляет впечатление о значительном дефиците и недоборе калорий — это может негативно сказаться на самочувствии. Похоже, нормы по КЖБУ не закрыты, и вода тоже не дотягивает до рекомендуемого уровня.</p>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">💪 Сильные стороны дня:</div>
-                  <div class="mono">
-- Полезные источники белка (тилапия)
-- Овощи (стручковая фасоль)
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">⚠️ Слабые места:</div>
-                  <div class="mono">
-- Недобор калорий: 556 ккал при норме 2200
-- Недобор белка: 62 г при норме 150 г
-- Вода: 1 л вместо 2,5 л
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">👔 Почему это критично</div>
-                  <p>Для бухгалтера важны концентрация и устойчивый уровень энергии. Нехватка калорий и воды усиливает усталость и снижает фокус.</p>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">🥗 Продукты для улучшения:</div>
-                  <div class="mono">
-- Нежирное мясо (куриная грудка, индейка)
-- Йогурт/творог
-- Овсянка/каши (если подходят)
-- Фрукты (яблоки, груши)
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">📅 Меню на завтра:</div>
-                  <div class="mono">
-Завтрак: омлет из 2 яиц со шпинатом и помидорами, 100 г творога с ягодами.
-Обед: 200 г курицы + 150 г брокколи + 150 г пюре (или цветная капуста).
-Ужин: 150 г рыбы + 100 г киноа + салат.
-Перекус: 1 яблоко + немного миндаля.
-                  </div>
-                </div>
-
-                <div class="bubble bubble--bot">
-                  <div class="bubble__title">💧 Вода</div>
-                  <p>Старайся пить чаще и по чуть-чуть. Добавь фрукты в перекусы для энергии.</p>
-                </div>
-              </div>
-            </article>
           </div>
         </div>
       </div>
@@ -324,7 +176,6 @@
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Стоимость программы</h2>
-          <p class="section__desc">Как в боте — простые варианты ввода и фиксированная цена.</p>
         </div>
 
         <div class="pricing pricing--two">
@@ -333,7 +184,6 @@
               <h3 class="h3">300 ₽</h3>
               <div class="price-card__price">ввод текстом</div>
             </div>
-            <p class="price-card__desc">Вносите приёмы пищи текстом. Получаете нормы, остаток и разбор.</p>
             <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть бота</a>
           </article>
 
@@ -342,16 +192,9 @@
               <h3 class="h3">499 ₽</h3>
               <div class="price-card__price">голос / фото</div>
             </div>
-            <p class="price-card__desc">Можно отправлять голосом или фото. Остальное — как в боте.</p>
             <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть бота</a>
           </article>
         </div>
-
-        <p class="pricing__note">
-          <span class="pill">Формат не медицинский</span>
-          <span class="pill">Без диагнозов</span>
-          <span class="pill">Без жёстких диет</span>
-        </p>
       </div>
     </section>
 
@@ -362,7 +205,7 @@
           <h2 class="h2">О проекте</h2>
           <p>
             Проект вырос из наблюдений за тем, как разные виды работы требуют разного подхода к питанию.
-            Мы сделали простой формат, который учитывает рабочую нагрузку, а не абстрактные советы.
+            Мы сделали простой формат, который учитывает рабочую нагрузку.
           </p>
         </div>
       </div>
@@ -376,6 +219,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=25" defer></script>
+  <script src="./script.js?v=26" defer></script>
 </body>
 </html>

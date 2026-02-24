@@ -1012,3 +1012,51 @@ html[data-theme="dark"] :focus-visible{
   z-index: 1000;
 }
 .skip-link:focus{ left:12px; }
+/* Hero: kicker under title */
+.hero-kicker{
+  margin: 14px 0 0;
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.18;
+  letter-spacing: var(--tracking);
+  font-weight: 750;
+  color: var(--text);
+  max-width: 70ch;
+}
+
+/* HR line under images (big HR tag) */
+.hero-hr{
+  margin: 6px 0 0;
+  padding: 14px 16px;
+  border-radius: var(--radius2);
+  border: 1px solid var(--line);
+  background: var(--surface2);
+  box-shadow: var(--shadow-sm);
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.hero-hr__tag{
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(27,143,80,.28);
+  background: rgba(27,143,80,.10);
+  flex: 0 0 auto;
+}
+
+html[data-theme="dark"] .hero-hr__tag{
+  border-color: rgba(228,176,74,.26);
+  background: rgba(228,176,74,.10);
+}
+
+.hero-hr__text{
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.45;
+  font-weight: 650;
+  max-width: 90ch;
+}
