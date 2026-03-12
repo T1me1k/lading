@@ -5,8 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>По работе и еда</title>
-  <meta name="description"
-    content="Персональная программа питания под вашу рабочую нагрузку. Фиксированные тарифы. Формат — Telegram." />
+  <meta name="description" content="Корректировка приёмов пищи под тип работы и нагрузку. Формат — Telegram." />
 
   <!-- Theme pre-init (prevents flash) -->
   <script>
@@ -28,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=8">
+  <link rel="stylesheet" href="./styles.css?v=10">
 </head>
 
 <body>
@@ -42,9 +41,9 @@
       </a>
 
       <nav class="nav" aria-label="Навигация">
-        <a class="nav__link" href="#types">Типы работы</a>
         <a class="nav__link" href="#how">Как устроено</a>
-        <a class="nav__link" href="#pricing">Цены</a>
+        <a class="nav__link" href="#dialogs">Примеры</a>
+        <a class="nav__link" href="#pricing">Стоимость</a>
         <a class="nav__link nav__link--cta" href="https://t.me/work_and_food_bot" target="_blank" rel="noopener">Открыть
           бота</a>
       </nav>
@@ -75,9 +74,9 @@
 
     <div class="mobile-menu" hidden>
       <div class="container mobile-menu__inner">
-        <a class="mobile-menu__link" href="#types">Типы работы</a>
         <a class="mobile-menu__link" href="#how">Как устроено</a>
-        <a class="mobile-menu__link" href="#pricing">Цены</a>
+        <a class="mobile-menu__link" href="#dialogs">Примеры</a>
+        <a class="mobile-menu__link" href="#pricing">Стоимость</a>
         <a class="mobile-menu__link mobile-menu__link--cta" href="https://t.me/work_and_food_bot" target="_blank"
           rel="noopener">Открыть бота</a>
       </div>
@@ -89,19 +88,16 @@
     <section class="section hero hero--full">
       <div class="container hero__stack">
         <div class="hero__text">
-          <h1 class="h1 hero-title hero-title--big">Программа питания под вашу работу</h1>
+          <h1 class="h1 hero-title hero-title--big">
+            Корректировка ваших приёмов пищи под тип вашей работы и нагрузки
+          </h1>
 
-          <p class="subhead hero__subhead">
-            Подбираем питание под нагрузку — чтобы было больше фокуса, устойчивости и энергии.
+          <p class="hero-kicker reveal">
+            Не диеты и не спорт — а подпитываем в течение дня именно то, что нагружаем.
           </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#pricing">Выбрать тариф</a>
-            <a class="btn btn--ghost" href="#how">Посмотреть пример</a>
-          </div>
         </div>
 
-        <!-- 3 картинки типов работ -->
+        <!-- 3 картинки -->
         <div class="hero-types" id="types">
           <article class="hero-type-card reveal">
             <div class="hero-type-card__img">
@@ -128,151 +124,24 @@
           </article>
         </div>
 
-        <div class="hero-benefits reveal" aria-label="Что вы получите">
-          <div class="hero-benefit">Понимание, какая еда поддерживает именно вашу рабочую нагрузку</div>
-          <div class="hero-benefit">Меньше усталости и «проседаний» в течение дня</div>
-          <div class="hero-benefit">Корректировки, которые можно применить сразу — без диет</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section statement">
-      <div class="container">
-        <p class="quote reveal">
-          Одна и та же еда по-разному влияет<br />
-          на разные виды работы.
+        <p class="hero-hr reveal">
+          <span class="hero-hr__tag">HR</span>
+          <span class="hero-hr__text">
+            — простой цифровой формат поддержки сотрудников: уменьшение скрытой усталости и спадов энергии у команды без
+            инфраструктуры и больших затрат.
+          </span>
         </p>
       </div>
     </section>
 
-    <!-- Цены -->
-    <section class="section" id="pricing">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Стоимость программы</h2>
-          <p class="section__desc">
-            Фиксированная цена. Можно начать с месяца и продлить, если формат подходит.
-          </p>
-        </div>
-
-        <div class="pricing">
-          <article class="price-card reveal">
-            <div class="price-card__top">
-              <h3 class="h3">ввод текстом</h3>
-              <div class="price-card__price">350 ₽</div>
-            </div>
-            <p class="price-card__desc">Стартовая программа и первые корректировки.</p>
-            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank"
-              rel="noopener">Купить</a>
-          </article>
-
-          <article class="price-card reveal">
-            <div class="price-card__top">
-              <h3 class="h3">ввод голос, фото</h3>
-              <div class="price-card__price">549 ₽</div>
-            </div>
-            <p class="price-card__desc">Голосом и по фото.</p>
-            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank"
-              rel="noopener">Купить</a>
-          </article>
-        </div>
-
-        <p class="pricing__note">
-          <span class="pill">Формат не медицинский</span>
-          <span class="pill">Без диагнозов</span>
-          <span class="pill">Без жёстких диет</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="types-details">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Как мы учитываем тип работы</h2>
-          <p class="section__desc">
-            Смотрим не на «правильно/неправильно», а на то, какое состояние нужно под вашу нагрузку.
-          </p>
-        </div>
-
-        <div class="cards">
-          <article class="card card--type reveal">
-            <div class="card__top">
-              <h3 class="h3">Умственная работа</h3>
-            </div>
-            <p class="card__text">Фокус, внимание, концентрация</p>
-          </article>
-
-          <article class="card card--type reveal">
-            <div class="card__top">
-              <h3 class="h3">Эмоциональная работа</h3>
-            </div>
-            <p class="card__text">Устойчивость, спокойствие, восстановление</p>
-          </article>
-
-          <article class="card card--type reveal">
-            <div class="card__top">
-              <h3 class="h3">Физическая работа</h3>
-            </div>
-            <p class="card__text">Энергия, выносливость, восстановление</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section soft">
-      <div class="container">
-        <div class="callout callout--compact reveal">
-          <h2 class="h2">Наш подход</h2>
-          <p class="callout__text">
-            Вы описываете приём пищи и рабочую нагрузку — мы даём понятные корректировки под ваш режим.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Как это устроено</h2>
-          <p class="section__desc">
-            Описали еду → указали тип работы → получили пояснение и варианты корректировки.
-          </p>
-        </div>
-
-        <div class="how">
-          <div class="how__left reveal">
-            <ul class="steps">
-              <li class="steps__item"><span class="steps__dot"></span><span>Описываете приём пищи обычными
-                  словами</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span>Указываете тип рабочей нагрузки</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span>Получаете объяснение влияния на
-                  состояние</span></li>
-              <li class="steps__item"><span class="steps__dot"></span><span>Получаете корректировки, которые можно
-                  применить сразу</span></li>
-            </ul>
-          </div>
-
-          <div class="how__right reveal" id="examples">
-            <div class="shots">
-              <button class="shot-thumb is-active" type="button" data-shot="1" aria-label="Пример диалога 1">Диалог
-                1</button>
-              <button class="shot-thumb" type="button" data-shot="2" aria-label="Пример диалога 2">Диалог 2</button>
-            </div>
-
-            <div class="shot">
-              <img id="tgShot" src="./assets/tg-1.svg" alt="Пример Telegram-диалога" loading="lazy" />
-              <p class="shot__note">Это пример сценария, без обещаний результата.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- Безопасность -->
     <section class="section" id="safety">
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Безопасность и простота</h2>
-          <p class="section__desc">Формат сделан так, чтобы быть понятным и безопасным в использовании.</p>
+          <p class="section__desc">
+            Формат сделан так, чтобы быть понятным и безопасным в использовании.
+          </p>
         </div>
 
         <div class="checklist">
@@ -285,13 +154,74 @@
       </div>
     </section>
 
+    <!-- Как это устроено -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Как это устроено</h2>
+          <p class="section__desc">Нагрузка → питание → состояние</p>
+        </div>
+
+        <div class="how how--single">
+          <div class="how__left reveal">
+            <ul class="steps">
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Заполняем анкету</b> (работа и нагрузка
+                  вне неё)</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Вводим приём пищи</b> (текст, голос,
+                  фото)</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Получаете подсчёт БЖУ</b> + норму на день
+                  (формула Миффлина–Сан Жеора) и остаток</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Понятное объяснение</b> влияния еды +
+                  корректировки</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>В конце дня</b> — разбор и меню на
+                  завтра</span></li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>В конце недели</b> — полный разбор</span>
+              </li>
+              <li class="steps__item"><span class="steps__dot"></span><span><b>Учитывается вода</b> — вносится
+                  отдельно</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Стоимость -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Стоимость программы</h2>
+        </div>
+
+        <div class="pricing pricing--two">
+          <article class="price-card reveal">
+            <div class="price-card__top">
+              <h3 class="h3">350 ₽</h3>
+              <div class="price-card__price">ввод текстом</div>
+            </div>
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank"
+              rel="noopener">Открыть бота</a>
+          </article>
+
+          <article class="price-card price-card--best reveal">
+            <div class="price-card__top">
+              <h3 class="h3">549 ₽</h3>
+              <div class="price-card__price">голос / фото</div>
+            </div>
+            <a class="btn btn--primary btn--block" href="https://t.me/work_and_food_bot" target="_blank"
+              rel="noopener">Открыть бота</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- О проекте -->
     <section class="section soft">
       <div class="container">
         <div class="about reveal">
           <h2 class="h2">О проекте</h2>
           <p>
             Проект вырос из наблюдений за тем, как разные виды работы требуют разного подхода к питанию.
-            Мы сделали простой формат, который учитывает рабочую нагрузку, а не абстрактные советы.
+            Мы сделали простой формат, который учитывает рабочую нагрузку.
           </p>
         </div>
       </div>
@@ -305,7 +235,7 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=24" defer></script>
+  <script src="./script.js?v=26" defer></script>
 </body>
 
 </html>
